@@ -4,17 +4,12 @@
 		<!-- MISC/META -->
 		<title>ZenPen ~ Minimal Distraction, Maximum Zen</title>
 		<meta charset="utf-8" />
-		<meta
-			name="description"
-			content="Zenpen - A minimal text editor, made to stay out of the way while you get the words down."
-		/>
+		<meta name="description"
+			content="Zenpen - A minimal text editor, made to stay out of the way while you get the words down." />
+
+		<link rel="manifest" href="manifest.json">
 
 		<!-- CSS -->
-		<link
-			href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
-			rel="stylesheet"
-			type="text/css"
-		/>
 		<link href="css/style.css" rel="stylesheet" />
 		<link href="css/fonts.css" rel="stylesheet" />
 	</head>
@@ -48,11 +43,7 @@
 				<span class="no-overflow">
 					<span class="lengthen ui-inputs">
 						<button class="url useicons">&#xe005;</button>
-						<input
-							class="url-input"
-							type="text"
-							placeholder="Type or Paste URL here"
-						/>
+						<input class="url-input" type="text" placeholder="Type or Paste URL here" />
 						<button class="bold">b</button>
 						<button class="italic">i</button>
 						<button class="quote">&rdquo;</button>
@@ -81,11 +72,7 @@
 				</div>
 
 				<div class="bottom">
-					<a
-						class="about"
-						href="https://www.buymeacoffee.com/tholman"
-						target="_blank"
-					>
+					<a class="about" href="https://www.buymeacoffee.com/tholman" target="_blank">
 						☕
 					</a>
 				</div>
@@ -101,6 +88,13 @@
 			<article contenteditable="true" class="content"></article>
 		</section>
 
+		<!-- Register service worker for PWA -->
+		<script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/sw.js', { scope: '/' });
+			}
+		</script>
+
 		<!-- LIBS -->
 		<script src="js/libs/FileSaver.min.js"></script>
 		<script src="js/libs/Blob.min.js"></script>
@@ -115,20 +109,6 @@
 			// Initiate ZenPen
 			ZenPen.editor.init();
 			ZenPen.ui.init();
-		</script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=UA-38039699-1"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "UA-38039699-1");
 		</script>
 	</body>
 </html>
