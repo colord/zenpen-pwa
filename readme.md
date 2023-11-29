@@ -4,6 +4,8 @@ Zenpen is a web app for writing minimally, and getting into the Zone.
 
 All information is persistent locally, using HTML5 local storage.
 
+This fork focuses on making Zenpen a progressive web app.
+
 ### ZenPen's minimal interface
 ![ZenPen](https://i.imgur.com/uP8Ensx.png)
 
